@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/raylab/static/css/main.1251e413.css",
-    "main.js": "/raylab/static/js/main.eab757a7.js",
+    "main.js": "/raylab/static/js/main.07525876.js",
     "static/js/787.d774eea2.chunk.js": "/raylab/static/js/787.d774eea2.chunk.js",
     "static/media/slick.svg": "/raylab/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/raylab/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/raylab/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/raylab/index.html",
     "main.1251e413.css.map": "/raylab/static/css/main.1251e413.css.map",
-    "main.eab757a7.js.map": "/raylab/static/js/main.eab757a7.js.map",
+    "main.07525876.js.map": "/raylab/static/js/main.07525876.js.map",
     "787.d774eea2.chunk.js.map": "/raylab/static/js/787.d774eea2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1251e413.css",
-    "static/js/main.eab757a7.js"
+    "static/js/main.07525876.js"
   ]
 }
