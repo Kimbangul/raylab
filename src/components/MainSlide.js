@@ -6,19 +6,27 @@ import "slick-carousel/slick/slick-theme.css";
 // style
 import styled from 'styled-components';
 const StyledMain = styled.main`
+  width: 100%;
+  overflow: hidden;
   position: relative;
   & .slick-list{font-size: 0;}
   /* slide */
   & .slide{
-    display: inline-flex !important;
-    justify-content: center;
+    display: block!important;
     position: relative;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   } 
 
    /* slide text */
   & .con{    
     position: absolute;
-    bottom: 0;   
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);  
     & .text_box{
     width: 792px;
     height: 625px;

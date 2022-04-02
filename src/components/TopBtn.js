@@ -26,7 +26,7 @@ const StyledButton = styled.button`
 
 const TopBtn = () => {
   return(
-    <StyledButton>
+    <StyledButton id="top-btn">
       <FontAwesomeIcon icon={faArrowUp} />
     </StyledButton>
   );

@@ -51,10 +51,14 @@ const GlobalStyle = createGlobalStyle`
     }
     /* custom */
     html, body{
-      min-width: 200px;
+      min-width: 280px;
       font-size: 1.6rem;
       font-family: 'Noto Sans KR' , 'sans-serif';   
       color: #333; 
+    }
+    body{
+      /* width: 100vw; */
+      /* overflow-x: hidden; */
     }
     a,img{display: block;}
     
