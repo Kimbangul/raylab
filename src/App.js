@@ -27,11 +27,13 @@ const StyledApp = styled.div`
     &  #top-btn{
       right: 35px;
   }
+}
   @media(max-width: 500px){
     &  #top-btn{
       right: 25px;
       bottom: 25px;
   }
+}
 `;
 
 function App() {

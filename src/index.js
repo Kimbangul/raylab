@@ -24,7 +24,7 @@ ReactDOM.render(
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link>
     </Helmet>    
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <App />
     </BrowserRouter>        
   </StrictMode>,
