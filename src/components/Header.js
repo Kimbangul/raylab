@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 // components
@@ -8,6 +8,8 @@ import MenuBtn from './MenuBtn';
 
 // style
 import styled from 'styled-components';
+
+
 const StyledHeader = styled.header`
   width: 100%;
   height: ${props => props.propheight};
@@ -35,6 +37,10 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
   }
+
+  & #nav-wrap{
+    animation: fadeIn 0.3s;
+  }
 `;
 
 const Header =()=> {
@@ -43,12 +49,11 @@ const Header =()=> {
       console.log(open);
       setNavOpen((open) => !open);      
   }
-
   return(
     <StyledHeader propheight="9.5rem" propopen={open} className="flex flex-ai-c flex-jc-b">
-      <div id="logo-wrap"><Logo/></div>
-      <div id="nav-wrap"><Nav propopen={open} propheight="9.5rem"/></div>
-      <div id="menu-btn-wrap" className="flex flex-jc-e"> <MenuBtn propopener={NavToggle}/></div>     
+      <div id="logo-wrap" className="wow fadeInLeft"><Logo/></div>
+      <div id="nav-wrap" className="wow fadeIn" data-wow-duration="1s"><Nav propopen={open} propheight="9.5rem"/></div>
+      <div id="menu-btn-wrap" className="flex flex-jc-e wow fadeInRight"> <MenuBtn propopener={NavToggle}/></div>     
     </StyledHeader>
   );
 }

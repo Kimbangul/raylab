@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 // router
 import { Routes, Route } from 'react-router-dom';
@@ -9,9 +9,12 @@ import {Main} from 'pages/index';
 // style
 import GlobalStyle from 'styles/Globalstyle';
 import styled from 'styled-components';
+// wow
+import WOW from 'wowjs';
 
 // Layout
 import {Header, Footer, TopBtn} from 'pages/Layout';
+
 
 const StyledApp = styled.div`
   & #top-btn{
@@ -22,6 +25,15 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+  useEffect(() => {
+    window.onbeforeunload = function pushRefresh() {
+      window.scrollTo(0, 0);
+    };
+  
+  }, []);
   return (
     <StyledApp className="App">  
       <GlobalStyle />  
