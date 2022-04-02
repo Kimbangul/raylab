@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   height: 100%;
   
   /* depth 1 */
-  & .depth_1{
+  & .depth-1{
     position: relative;
     z-index: 5;
     display: flex;
@@ -23,6 +23,62 @@ const StyledNav = styled.nav`
       }
     }
   } 
+
+  @media(max-width: 1280px){
+      & .depth-1{
+        & > li{
+          padding: 0 1.8rem;
+        }
+      }    
+  }
+
+  @media (max-width: 780px){    
+    position: fixed;
+    top: 0;
+    transition: all 0.35s;
+    left: ${props => props.open ? "0" : "-120%"};
+    opacity: ${props => props.open ? "1" : "0"};
+    width: 40%;
+    min-width: 280px;
+    height: 100%;
+    background: var(--main-color); 
+    & .depth-1{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;    
+      &>li{
+        color: #fff;
+        height: auto;
+        margin-bottom: 2rem;
+        & a{
+          padding: 1rem 0;
+          font-size: 2rem;
+          justify-content: left;
+          height: auto;
+        }
+      }      
+    } 
+    
+    & .depth-2{
+      height: auto;
+      position: static;
+      transform: none;
+      & > li{
+        & a{
+          font-size: 1.4rem;
+          padding: 0.7rem 0;
+          padding-left: 2.5rem;
+          text-align: left;  
+          &::before{
+            content: "-";
+            display: inline-block;
+            margin-right: 0.7rem;
+          }        
+        }        
+      }
+    }
+  }
 `;
 
 const Depth1Link = styled(Link)`
@@ -32,6 +88,7 @@ const Depth1Link = styled(Link)`
         align-items: center;
         height: 100%;
         position: relative;
+        transition: font-size 0.35s;
         &::after{
           content: "";
           width: 0%;
@@ -40,13 +97,21 @@ const Depth1Link = styled(Link)`
           position: absolute;
           top: 68%;
           background: var(--main-color);
-          transition: all 0.35s;
+          transition: all 0.35s;         
         }
         &:hover{
           &::after{
             width: 100%;
           }          
         }
+
+ @media (max-width: 1680px){
+      font-size: 1.6rem;    
+  }
+  @media (max-width: 1280px){
+      font-size: 1.4rem;    
+  } 
+
 `;
 
 const Depth2 = styled.ul`
@@ -68,15 +133,25 @@ const Depth2 = styled.ul`
         padding: 0.5rem 0;
       }
     }
+
+    @media(max-width:780px){
+      & {
+        & > li{
+          & > a{
+            padding: 1.2rem 0;
+          }
+        }
+      }
+    }
 `;
 
 const Nav = (props) => {
   return(
     <StyledNav propheight={props.propheight} open={props.propopen}>
-      <ul className="depth_1">
+      <ul className="depth-1">
         <li>
           <Depth1Link to="#">ABOUT</Depth1Link>
-          <Depth2 propopen={props.propopen} className="depth_2">
+          <Depth2 propopen={props.propopen} className="depth-2">
                 <li>
                 <Link to="#">
                   회사소개
@@ -91,7 +166,7 @@ const Nav = (props) => {
         </li>
         <li>
         <Depth1Link to="#">VISION </Depth1Link>
-            <Depth2 propopen={props.propopen} className="depth_2">
+            <Depth2 propopen={props.propopen} className="depth-2">
               <li>
                 <Link to="#">
                   비전
@@ -111,7 +186,7 @@ const Nav = (props) => {
         </li>
         <li>
         <Depth1Link to="#">BUSINESS</Depth1Link>
-            <Depth2 propopen={props.propopen} className="depth_2">
+            <Depth2 propopen={props.propopen} className="depth-2">
               <li>
                 <Link to="#">
                   사업영역
@@ -131,7 +206,7 @@ const Nav = (props) => {
         </li>
         <li>
         <Depth1Link to="#">CONTACT</Depth1Link>
-            <Depth2 propopen={props.propopen} className="depth_2">
+            <Depth2 propopen={props.propopen} className="depth-2">
               <li>
                 <Link to="#">
                   CONTACT

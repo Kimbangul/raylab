@@ -9,6 +9,12 @@ const StyledFooter = styled.footer`
   & .copy{
     font-size: 1.8rem;
     color: #fff;
+    transition: font-size 0.35s;
+  }
+  @media(max-width: 780px){
+    & .copy{
+      font-size: 1.5rem;
+    }
   }
 `;
 

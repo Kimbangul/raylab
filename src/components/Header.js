@@ -17,6 +17,7 @@ const StyledHeader = styled.header`
   background: #fff;
   position: fixed;
   z-index: 999;
+  transition: all 0.35s;
   &::before{
     /* nav bg */
     position: absolute;
@@ -40,6 +41,32 @@ const StyledHeader = styled.header`
 
   & #nav-wrap{
     animation: fadeIn 0.3s;
+  }
+
+  @media (max-width: 1680px){
+    &{
+      padding: 0 3rem;
+    }    
+  }
+
+  @media (max-width: 780px){
+    &{
+      padding: 0 2rem;
+      height: 5.5rem;
+      &::before{
+        display: none;
+      }
+      & #nav-wrap{
+        flex-grow: 0;
+        flex-shirink: 1;
+      }
+    }    
+  }
+
+  @media (max-width: 500px){
+    &{
+      padding: 0 1.5rem;
+    }    
   }
 `;
 

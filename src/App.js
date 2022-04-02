@@ -21,7 +21,17 @@ const StyledApp = styled.div`
     position: fixed;
     bottom: 35px;
     right: 50px;
+    transition: all 0.35s;
   }  
+  @media(max-width: 1280px){
+    &  #top-btn{
+      right: 35px;
+  }
+  @media(max-width: 500px){
+    &  #top-btn{
+      right: 25px;
+      bottom: 25px;
+  }
 `;
 
 function App() {

@@ -31,6 +31,7 @@ const StyledMain = styled.main`
   width: 100%;
   overflow: hidden;
   position: relative;
+  
   & .slick-list{font-size: 0;}
   /* slide */
   & .slide{
@@ -62,14 +63,20 @@ const StyledMain = styled.main`
     height: 625px;
     padding: 0 70px;
     background: #ffffffaa;
+    transition: all 0.35s;
+    & span{
+      font-family: sans-serif;
+    }
       & h1{
         font-weight: 400;
-        font-size: 4.8rem;
+        font-size: 5.8rem;
         line-height: 1.4em;
         margin-bottom: 5rem;
+        transition: all 0.35s;
       }
       & p{
         font-size: 2.1rem;
+        transition: all 0.35s;
       }
     }
   }  
@@ -102,6 +109,73 @@ const StyledMain = styled.main`
         }
       }
     }
+  }
+
+ @media(max-width: 1680px){
+   & .con{
+    & .text-box{
+        width: 40%;
+        height: auto;
+        padding: 70px 80px;
+        & h1{
+          font-size: 3rem;
+        }
+        & p{
+          font-size: 1.8rem;
+        }
+      }
+   }     
+}
+
+@media(max-width: 1280px){
+  .con{
+    & .text-box{
+      padding: 40px 50px;
+      text-align: center;
+      & h1{
+      font-size: 2rem;
+    }
+    }    
+  }
+}
+@media (max-width:960px){
+
+  &{
+    .con{
+      top: 50%;
+      bottom: unset;
+      transform: translateX(-50%)translateY(-50%);
+      justify-content: center;
+      & .text-box{
+        width: 90%;
+        padding: 20px 25px;
+        & h1{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        }
+        & p{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }  
+
+  & .slide{
+    height: 400px;
+  }
+
+  & .slick-dots{
+    display: flex !important;
+    justify-content: center;
+    & li{
+      width: 20%;
+      & button{
+        width: 100%;
+        height: 10px;
+      }
+    }
+  }
+}
 `;
 
 const Slidesettings = {
@@ -124,7 +198,7 @@ const MainSlide = () => {
         <img src="img/slider_01.jpg" alt="슬라이드 이미지"/>
         <div className="con flex flex-jc-e">
           <div className="text-box flex flex-d-c flex-jc-c">
-            <h1>안정적 가치창출과 만족을, <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
+            <h1>안정적 가치창출과 만족을<span>,</span> <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
             <p>재화와 서비스의 공급을 혁신하여 산업을 선도합니다.</p>
           </div>
         </div>        
@@ -133,7 +207,7 @@ const MainSlide = () => {
        <img src="img/slider_02.jpg" alt="슬라이드 이미지"/>
        <div className="con flex flex-jc-e">
           <div className="text-box flex flex-d-c flex-jc-c">
-            <h1>안정적 가치창출과 만족을, <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
+            <h1>안정적 가치창출과 만족을<span>,</span> <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
             <p>재화와 서비스의 공급을 혁신하여 산업을 선도합니다.</p>
           </div>
         </div>
@@ -142,7 +216,7 @@ const MainSlide = () => {
       <img src="img/slider_03.jpg" alt="슬라이드 이미지"/>
         <div className="con flex flex-jc-e">
           <div className="text-box flex flex-d-c flex-jc-c">
-            <h1>안정적 가치창출과 만족을, <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
+            <h1>안정적 가치창출과 만족을<span>,</span> <br/>기업 구성원의 꿈과<br/>성취를 함께하는 기업</h1>
             <p>재화와 서비스의 공급을 혁신하여 산업을 선도합니다.</p>
           </div>
         </div>

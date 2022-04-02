@@ -19,6 +19,15 @@ const StyledButton = styled.button`
     height: 5px;
     background: var(--main-color);
   } 
+
+  @media (max-width: 1680px){
+  &{
+    width: 21px;
+    height: 21px;
+    & span{
+      height: 2px;
+    }
+  }
 `;
 
 const MenuBtn = props => {

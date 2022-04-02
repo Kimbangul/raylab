@@ -7,6 +7,16 @@ const StyledLogo = styled.h1`
   & a{
     display: inline-block;
   }
+  & img{
+    transition: all 0.35s;
+  }
+  @media (max-width: 1680px){
+    &{
+      & img{
+        width: 120px;
+      }
+    }    
+  }
 `;
 
 const Logo = () => {

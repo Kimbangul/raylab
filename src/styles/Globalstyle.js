@@ -62,6 +62,40 @@ const GlobalStyle = createGlobalStyle`
     }
     a,img{display: block;}
     
+    @media(max-width: 1680px){
+      :root{
+        --max-width: 1280px;
+      }
+    }
+
+    @media(max-width: 1280px){
+      :root{
+        --max-width: 960px;
+      }
+    }
+
+    @media(max-width: 960px){
+      :root{
+        --max-width: 780px;
+      }
+    }
+
+    @media(max-width: 780px){
+      :root{
+        --max-width:100%;
+      }
+      .con{
+        padding: 0 20px;
+      }
+    }
+    @media(max-width: 500px){
+      :root{
+        --max-width: 100%;
+      }
+      .con{
+        padding: 0 15px;
+      }
+    }
 `;
 
 export default GlobalStyle;

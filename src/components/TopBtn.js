@@ -22,6 +22,17 @@ const StyledButton = styled.button`
   &:hover{
     opacity: 0.5;
   }
+
+  @media(max-width: 1280px){
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+  }
+  @media(max-width: 500px){
+    width: 45px;
+    height: 45px;
+    font-size: 2.4rem;
+  }
 `;
 
 const scrollToTop = () =>{
