@@ -50,6 +50,8 @@ const StyledImageList = styled.article`
     /* contents */
     & p{
       letter-spacing: 0.03em;
+      font-size: 1.8rem;
+      line-height: 1.7em;
     }
   }
 `;

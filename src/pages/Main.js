@@ -130,8 +130,8 @@ const Main = () =>{
         <h2>사업영역</h2>
         <ul className="flex flex-jc-b">
           <li><ImageList boxWidth="520px" url="img/card_01.jpg" alt="케미칼 산업" title="케미칼 사업" content={"이른 아침 작은 새들 노랫소리 들려오면\n 언제나 그랬듯 아쉽게 잠을 깬다"}/></li>
-          <li><ImageList boxWidth="520px" url="img/card_02.jpg" alt="알루미늄 산업" title="알루미늄 산업" content={"창문 하나 햇살 가득 눈부시게 비쳐오고\n 서늘한 냉기에 재채기할까 말까"}/></li>
-          <li><ImageList boxWidth="520px" url="img/card_03.jpg" alt="비료" title="비료(FERTILIZER)" content={"눈 비비며 빼꼼히 창밖을 내다보니 \n삼삼오오 아이들은 재잘대며 학교 가고"}/></li>
+          <li><ImageList  boxWidth="520px" url="img/card_02.jpg" alt="알루미늄 산업" title="알루미늄 산업" content={"창문 하나 햇살 가득 눈부시게 비쳐오고\n 서늘한 냉기에 재채기할까 말까"}/></li>
+          <li><ImageList  boxWidth="520px" url="img/card_03.jpg" alt="비료" title="비료(FERTILIZER)" content={"눈 비비며 빼꼼히 창밖을 내다보니 \n삼삼오오 아이들은 재잘대며 학교 가고"}/></li>
         </ul>
         </Business>  
       </Wrapper>        

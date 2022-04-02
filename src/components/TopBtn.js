@@ -24,9 +24,16 @@ const StyledButton = styled.button`
   }
 `;
 
+const scrollToTop = () =>{
+  window.scrollTo({
+    top: 0, 
+    behavior: 'smooth'
+  });
+};
+
 const TopBtn = () => {
   return(
-    <StyledButton id="top-btn">
+    <StyledButton id="top-btn" onClick={scrollToTop}>
       <FontAwesomeIcon icon={faArrowUp} />
     </StyledButton>
   );

@@ -3,22 +3,10 @@ import { Link } from 'react-router-dom';
 
 // style
 import styled from 'styled-components';
+
 const StyledNav = styled.nav`
   height: 100%;
-  display: flex;
-  flex: 1 0 0;
-  justify-content: center;
-  position: relative;
-  &::after{
-    /* nav bg */
-    position: absolute;
-    top: 100%;
-    width: 100vw;
-    height: 125px;
-    content: "";
-    display: block;
-    background: var(--main-color);
-  }
+  
   /* depth 1 */
   & .depth_1{
     position: relative;
@@ -32,7 +20,13 @@ const StyledNav = styled.nav`
       color: var(--main-color);
       text-align: center;
       position: relative;
-      & > a{
+      }
+    }
+  } 
+`;
+
+const Depth1Link = styled(Link)`
+        /* & > a{ */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,14 +47,19 @@ const StyledNav = styled.nav`
             width: 100%;
           }          
         }
-      }
-    }
-  }
-  /* depth 2 */
-  & .depth_2{
+`;
+
+const Depth2 = styled.ul`
     color: #fff;
-    height: 125px;
+    height: ${props => props.propopen ? "125px" : "0px"};
     padding: 0.5rem 0;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    /* max-height:  ${props => props.propopen ? "unset" : props.propheight}; */
+    overflow: hidden; 
     & > li{
       font-size: 1.8rem;
       font-weight: 400;
@@ -69,27 +68,16 @@ const StyledNav = styled.nav`
         padding: 0.5rem 0;
       }
     }
-    /* &::after{
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100%;
-      background: var(--main-color);
-    } */
-  }
 `;
 
-const Nav = () => {
+const Nav = (props) => {
   return(
-    <StyledNav>
+    <StyledNav propheight={props.propheight} open={props.propopen}>
       <ul className="depth_1">
         <li>
-          <Link to="#">ABOUT</Link>
-            <ul className="depth_2">
-              <li>
+          <Depth1Link to="#">ABOUT</Depth1Link>
+          <Depth2 propopen={props.propopen} className="depth_2">
+                <li>
                 <Link to="#">
                   회사소개
                 </Link>
@@ -99,11 +87,11 @@ const Nav = () => {
                   회사연혁
                 </Link>
               </li>                
-            </ul>         
+            </Depth2>         
         </li>
         <li>
-          <Link to="#">VISION </Link>
-            <ul className="depth_2">
+        <Depth1Link to="#">VISION </Depth1Link>
+            <Depth2 propopen={props.propopen} className="depth_2">
               <li>
                 <Link to="#">
                   비전
@@ -119,11 +107,11 @@ const Nav = () => {
                   인재상
                 </Link>
               </li>               
-            </ul>         
+            </Depth2>         
         </li>
         <li>
-          <Link to="#">BUSINESS</Link>
-            <ul className="depth_2">
+        <Depth1Link to="#">BUSINESS</Depth1Link>
+            <Depth2 propopen={props.propopen} className="depth_2">
               <li>
                 <Link to="#">
                   사업영역
@@ -139,17 +127,17 @@ const Nav = () => {
                   사업장
                 </Link>
               </li>               
-            </ul>          
+            </Depth2>          
         </li>
         <li>
-          <Link to="#">CONTACT</Link>
-            <ul className="depth_2">
+        <Depth1Link to="#">CONTACT</Depth1Link>
+            <Depth2 propopen={props.propopen} className="depth_2">
               <li>
                 <Link to="#">
                   CONTACT
                 </Link>
               </li>                            
-            </ul>
+            </Depth2>
         </li>
       </ul>
     </StyledNav>

@@ -19,6 +19,9 @@ const StyledMain = styled.main`
       height: 100%;
       object-fit: cover;
     }
+
+    /* active slide */
+    
   } 
 
    /* slide text */
@@ -39,7 +42,7 @@ const StyledMain = styled.main`
         margin-bottom: 5rem;
       }
       & p{
-        font-size: 1.8rem;
+        font-size: 2.1rem;
       }
     }
   }  
